@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qiyao Yan — Peking University</title>
+  <meta name="description" content="Qiyao Yan's academic homepage. Research on LLM reasoning, mechanistic interpretability, and agents at Peking University." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F393;</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Apply saved / preferred theme before first paint to avoid flash.
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+
+  <main class="container">
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <img class="headshot" src="assets/headshot.jpg" alt="Qiyao Yan" />
+      <div class="header-text">
+        <h1>Qiyao Yan <span class="cjk">严棋耀</span></h1>
+        <p class="affil">
+          Undergraduate, Computer Science &amp; Technology<br />
+          School of Electronics Engineering and Computer Science, Peking University
+        </p>
+        <p class="affil">
+          Incoming Ph.D. student (2027), Institute of Computational Linguistics, Peking University<br />
+          Advisor: <a href="https://icl.pku.edu.cn/" target="_blank" rel="noopener">Prof. Houfeng Wang</a>
+        </p>
+        <p class="interests">
+          LLM Reasoning · Mechanistic Interpretability · Agents · Reliability
+        </p>
+        <nav class="links">
+          <a href="mailto:yqy.1@foxmail.com">Email</a>
+          <a href="https://github.com/yanqiyao1" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="placeholder" title="Coming soon">Google Scholar</a>
+          <a href="#" class="placeholder" title="Coming soon">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== About ===== -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a final-year undergraduate in Computer Science at
+        <a href="https://eecs.pku.edu.cn/" target="_blank" rel="noopener">Peking University</a>.
+        I will join the Institute of Computational Linguistics at PKU as a Ph.D. student in 2027,
+        advised by Prof. Houfeng Wang.
+      </p>
+      <p>
+        My research aims to understand <em>how large language models actually reason</em> —
+        what happens inside the network between reading a problem and emitting an answer —
+        and to make that reasoning more reliable. Concretely, I work on mechanistic
+        interpretability of logical reasoning, diagnosis and calibration of model outputs,
+        and cost-aware test-time decision making for agents.
+      </p>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="date">2026.08</span>
+          <span class="item-text">Two papers <strong>accepted to EMNLP 2026 main conference</strong> — one as first
+          author, one as co-first author. &#x1F389;</span>
+        </li>
+        <li>
+          <span class="date">2026.08</span>
+          <span class="item-text">Working on <strong>MetaBudget</strong>, a unified think / ask / answer metareasoning
+          framework for cost-aware agents; targeting ICLR.</span>
+        </li>
+        <li>
+          <span class="date">2025.06</span>
+          <span class="item-text">Admitted to the direct Ph.D. program at the Institute of Computational Linguistics,
+          Peking University (advisor: Prof. Houfeng Wang).</span>
+        </li>
+        <li>
+          <span class="date">2025.05</span>
+          <span class="item-text">Received the <strong>Huawei Scholarship</strong> and PKU Merit Student award.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <article class="pub">
+        <h3 class="pub-title">
+          Wrong Prediction, Right Answer: Recovering Evidence from Collapsed LLM Sequence Scores
+        </h3>
+        <p class="pub-meta">
+          <strong>Qiyao Yan</strong>
+          <span class="badge">EMNLP 2026 · Main</span>
+          <span class="role">First author</span>
+        </p>
+        <p class="pub-desc">
+          We study cases where a model internally retains evidence for the correct answer yet
+          outputs the wrong one, disentangling reasoning failure from output-scoring distortion.
+          A lightweight, label-free correction using only 25 unlabeled samples recovers
+          9–34 accuracy points across four logical-reasoning benchmarks.
+        </p>
+        <p class="pub-links">
+          <a href="assets/papers/wrong_prediction_right_answer.pdf">PDF</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3 class="pub-title">
+          Towards a Mechanistic Understanding of Propositional Logical Reasoning in Large Language Models
+        </h3>
+        <p class="pub-meta">
+          <strong>Qiyao Yan</strong> et al.
+          <span class="badge">EMNLP 2026 · Main</span>
+          <span class="role">Co-first author</span>
+        </p>
+        <p class="pub-desc">
+          Through causal interventions on a controlled benchmark of 20,000 paired samples per
+          prompt order, we identify four cross-model reasoning patterns: staged computation,
+          boundary-position information aggregation, persistent backtracking to factual premises,
+          and functionally specialized attention heads.
+        </p>
+        <p class="pub-links">
+          <a href="assets/papers/mechanistic_propositional_reasoning.pdf">PDF</a>
+        </p>
+      </article>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects">
+      <h2>Selected Project</h2>
+      <article class="pub">
+        <h3 class="pub-title">MetaBudget: Think, Ask, or Answer</h3>
+        <p class="pub-meta">
+          Independent research project · Ongoing · Targeting ICLR
+        </p>
+        <p class="pub-desc">
+          A unified in-turn metareasoning framework in which a language model makes
+          cost-sensitive choices among internal reasoning (<em>think</em>), external
+          clarification (<em>ask</em>), and immediate answering (<em>answer</em>). We formalize
+          the competition between the value of computation and the value of information under
+          test-time costs, and train cost-conditioned policies (SFT cold-start +
+          cost-conditioned GRPO) to learn when asking beats thinking.
+        </p>
+      </article>
+    </section>
+
+    <!-- ===== Education & Honors ===== -->
+    <section id="education">
+      <h2>Education &amp; Honors</h2>
+      <ul class="edu-list">
+        <li>
+          <span class="date">2027–2032 (expected)</span>
+          <span class="item-text">Ph.D. in Computer Science (NLP), Institute of Computational Linguistics, Peking University</span>
+        </li>
+        <li>
+          <span class="date">2023–2027 (expected)</span>
+          <span class="item-text">B.Sc. in Computer Science &amp; Technology, Peking University · GPA 3.67 / 4.0</span>
+        </li>
+      </ul>
+      <ul class="honors-list">
+        <li>Huawei Scholarship, 2024–2025</li>
+        <li>Merit Student Award, Peking University, 2023–2024 &amp; 2024–2025</li>
+        <li>China Merchants Securities Scholarship, 2023–2024</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>Last updated: August 2026 · © <span id="year">2026</span> Qiyao Yan</p>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
